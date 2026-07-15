@@ -139,7 +139,7 @@ export default function RegistrationForm({ selectedTicketType, setSelectedTicket
   const [existingBooking, setExistingBooking] = useState<BookingConfirmation | undefined>(undefined);
 
   const getInstallmentOptions = (packagePrice: number) => {
-    const list = [25, 50, 60, 100, 180, 200, 250, 350];
+    const list = [5, 25, 50, 60, 100, 180, 200, 250, 350];
     return list.filter(amt => amt <= packagePrice);
   };
 

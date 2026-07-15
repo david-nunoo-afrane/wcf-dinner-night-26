@@ -1567,7 +1567,7 @@ export default function AttendeesView({ onBack }: AttendeesViewProps) {
                         >
                           {(() => {
                             const fullPrice = newGuestType === 'Table of 4' ? 350 : (newGuestType === 'Double' ? 180 : 100);
-                            const optionsList = [25, 50, 60, 100, 180, 200, 250, 350];
+                            const optionsList = [5, 25, 50, 60, 100, 180, 200, 250, 350];
                             const validOptions = optionsList.filter(amt => amt <= fullPrice);
                             return validOptions.map(amt => (
                               <option key={amt} value={amt} className="bg-obsidian text-pearl">
