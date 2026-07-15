@@ -1,0 +1,52 @@
+{
+  "entities": {
+    "BookingConfirmation": {
+      "title": "BookingConfirmation",
+      "description": "An event booking and ticketing registration confirmation",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique booking reference ID"
+        },
+        "registration": {
+          "type": "object",
+          "description": "Full registration demographic and selected ticket package detail"
+        },
+        "amountPaid": {
+          "type": "number",
+          "description": "Total amount paid or outstanding"
+        },
+        "date": {
+          "type": "string",
+          "description": "User local date or server system formatted date"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Confirmed", "Pending"],
+          "description": "Confirmation ticket eligibility status"
+        },
+        "paymentRef": {
+          "type": "string",
+          "description": "Unique transaction reference ID"
+        },
+        "paymentMethod": {
+          "type": "string",
+          "description": "Selected payment method (e.g. Mobile Money, Card)"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Database insertion server timezone timestamp"
+        }
+      },
+      "required": ["id", "registration", "amountPaid", "date", "status"]
+    }
+  },
+  "firestore": {
+    "bookings/{bookingId}": {
+      "schema": "BookingConfirmation",
+      "description": "Collection of golden banquet event registrations and attendee credentials"
+    }
+  }
+}

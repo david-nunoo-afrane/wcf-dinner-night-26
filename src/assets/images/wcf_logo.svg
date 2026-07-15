@@ -1,0 +1,144 @@
+<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Upper text arc: clockwise top flow -->
+    <path
+      id="wcf-text-arc-top"
+      d="M 28,80 A 52,52 0 0,1 132,80"
+      fill="none"
+    />
+    <!-- Lower text arc: counter-clockwise bottom wrap -->
+    <path
+      id="wcf-text-arc-bottom"
+      d="M 30,80 A 50,50 0 0,0 130,80"
+      fill="none"
+    />
+  </defs>
+
+  <!-- Outer circle layout -->
+  <circle
+    cx="80"
+    cy="72"
+    r="68"
+    fill="none"
+    stroke="#B38F6F"
+    stroke-opacity="0.3"
+    stroke-width="1"
+  />
+  <circle
+    cx="80"
+    cy="72"
+    r="64"
+    fill="none"
+    stroke="#710014"
+    stroke-width="2"
+  />
+  
+  <!-- Inner guiding lines around text -->
+  <circle
+    cx="80"
+    cy="72"
+    r="48"
+    fill="none"
+    stroke="#710014"
+    stroke-opacity="0.4"
+    stroke-width="0.8"
+  />
+
+  <!-- Upper Ring Text: WINNERS CAMPUS -->
+  <text font-family="system-ui, -apple-system, sans-serif" font-size="10px" font-weight="900" letter-spacing="0.24em" fill="#F2F1ED">
+    <textPath href="#wcf-text-arc-top" startOffset="50%" text-anchor="middle">
+      WINNERS CAMPUS
+    </textPath>
+  </text>
+
+  <!-- Lower Ring Text: FELLOWSHIP -->
+  <text font-family="system-ui, -apple-system, sans-serif" font-size="10.5px" font-weight="900" letter-spacing="0.26em" fill="#F2F1ED">
+    <textPath href="#wcf-text-arc-bottom" startOffset="50%" text-anchor="middle">
+      FELLOWSHIP
+    </textPath>
+  </text>
+
+  <!-- Central filled red circle backdrop -->
+  <circle
+    cx="80"
+    cy="72"
+    r="40"
+    fill="#710014"
+    stroke="#B38F6F"
+    stroke-opacity="0.35"
+    stroke-width="1.2"
+  />
+
+  <!-- Open book/scroll graphic inside the center -->
+  <!-- Maroon thickness base -->
+  <path
+    d="M 80,82 C 67,73 54,75 48,84 L 48,91 C 54,82 67,80 80,89 C 93,80 106,82 112,91 L 112,84 C 106,75 93,73 80,82 Z"
+    fill="#44000b"
+  />
+  <!-- Page cover detail -->
+  <path
+    d="M 80,80 C 67,71 54,73 48,82 L 48,87 C 54,78 67,76 80,85 C 93,76 106,78 112,87 L 112,82 C 106,73 93,71 80,80 Z"
+    fill="#F2F1ED"
+    stroke="#710014"
+    stroke-opacity="0.2"
+    stroke-width="0.5"
+  />
+  <!-- Middle Spine line -->
+  <line
+    x1="80"
+    y1="80"
+    x2="80"
+    y2="86"
+    stroke="#710014"
+    stroke-opacity="0.5"
+    stroke-width="0.8"
+  />
+
+  <!-- Tall central flame with side lick wisps -->
+  <!-- Outer glow flame (white/sand profile) -->
+  <path
+    d="M 80,36 C 72,45 68,54 68,64 C 68,76 74,80 80,80 C 86,80 92,76 92,64 Q 90,52 80,36 Z"
+    fill="#F2F1ED"
+  />
+  <!-- Middle crimson flame layer -->
+  <path
+    d="M 80,41 C 74,48 71,56 71,64 Q 71,76 80,76 T 89,64 C 89,56 86,48 80,41 Z"
+    fill="#710014"
+  />
+  <!-- Flame Core Glow (amber/sand color highlight) -->
+  <path
+    d="M 80,48 C 76,54 74,60 74,66 C 74,72 77,74 80,74 C 83,74 86,72 86,66 C 86,60 84,54 80,48 Z"
+    fill="#B38F6F"
+  />
+
+  <!-- Elegant Curved Banner Ribbon wrapping "WCF KNUST" at the bottom -->
+  <path
+     d="M 32,120 Q 80,138 128,120 C 136,117 142,122 142,128 C 142,132 138,136 132,138 L 82,148 L 32,138 C 26,136 22,132 22,128 C 22,122 28,117 32,120 Z"
+     fill="#710014"
+     stroke="#B38F6F"
+     stroke-opacity="0.4"
+     stroke-width="1.2"
+  />
+  <!-- Inner banner path for shading -->
+  <path
+     d="M 31,121 Q 80,139 129,121"
+     fill="none"
+     stroke="#B38F6F"
+     stroke-opacity="0.2"
+     stroke-width="0.8"
+  />
+
+  <!-- WCF KNUST banner text -->
+  <text
+    x="81"
+    y="135"
+    text-anchor="middle"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="10.5px"
+    font-weight="900"
+    letter-spacing="0.18em"
+    fill="#F2F1ED"
+  >
+    WCF KNUST
+  </text>
+</svg>

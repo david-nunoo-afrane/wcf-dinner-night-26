@@ -1,0 +1,178 @@
+<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Subtle shadow glow for the emblem to pop -->
+    <filter id="winners-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3" />
+    </filter>
+    <!-- Gradient for shield highlights -->
+    <linearGradient id="shield-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="60%" stop-color="#F9F7F5" />
+      <stop offset="100%" stop-color="#E6DECE" />
+    </linearGradient>
+    <!-- Soft sand gold gradient for pinstripe borders -->
+    <linearGradient id="sand-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B38F6F" />
+      <stop offset="50%" stop-color="#E2C9B1" />
+      <stop offset="100%" stop-color="#B38F6F" />
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#winners-glow)">
+    <!-- 1. GLOBE BASE (Centered at cx=80, cy=95) -->
+    <!-- Outer boundary of the globe ellipse -->
+    <ellipse
+      cx="80"
+      cy="95"
+      rx="65"
+      ry="44"
+      fill="#FFFFFF"
+      stroke="url(#sand-gold)"
+      stroke-width="1.5"
+    />
+
+    <!-- 2. LATITUDE & LONGITUDE GRID LINES -->
+    <!-- Horizontal Latitudes -->
+    <path
+      d="M 18,84 Q 80,104 142,84"
+      stroke="#B38F6F"
+      stroke-width="0.65"
+      stroke-dasharray="1 0.7"
+      opacity="0.55"
+    />
+    <path
+      d="M 16,95 L 144,95"
+      stroke="#B38F6F"
+      stroke-width="0.8"
+      opacity="0.65"
+    />
+    <path
+      d="M 18,106 Q 80,126 142,106"
+      stroke="#B38F6F"
+      stroke-width="0.65"
+      stroke-dasharray="1 0.7"
+      opacity="0.55"
+    />
+
+    <!-- Vertical Longitude Meridians (Curved) -->
+    <path
+      d="M 80,51 Q 50,95 80,139"
+      stroke="#B38F6F"
+      stroke-width="0.75"
+      opacity="0.55"
+    />
+    <path
+      d="M 80,51 Q 110,95 80,139"
+      stroke="#B38F6F"
+      stroke-width="0.75"
+      opacity="0.55"
+    />
+    <path
+      d="M 80,51 L 80,139"
+      stroke="#B38F6F"
+      stroke-width="0.8"
+      opacity="0.6"
+    />
+    <path
+      d="M 80,51 Q 30,95 80,139"
+      stroke="#B38F6F"
+      stroke-width="0.5"
+      stroke-dasharray="1.5 1"
+      opacity="0.35"
+    />
+    <path
+      d="M 80,51 Q 130,95 80,139"
+      stroke="#B38F6F"
+      stroke-width="0.5"
+      stroke-dasharray="1.5 1"
+      opacity="0.35"
+    />
+
+    <!-- 3. STYLIZED CONTINENT SILHOUETTES -->
+    <!-- Deep rich brand color silhouette representing land masses peeking out -->
+    <!-- North America (top left peeking) -->
+    <path
+      d="M 23,80 C 25,74 31,70 36,72 C 40,74 42,78 40,82 C 34,84 28,84 23,80 Z"
+      fill="#1C1816"
+      opacity="0.9"
+    />
+    <!-- South America (bottom left peeking) -->
+    <path
+      d="M 25,92 C 28,90 34,92 36,98 C 38,103 35,110 32,115 C 29,118 26,112 25,106 C 24,100 24,94 25,92 Z"
+      fill="#1C1816"
+      opacity="0.9"
+    />
+    <!-- Europe & Asia (top right peeking) -->
+    <path
+      d="M 116,74 C 122,70 128,70 135,74 C 141,78 143,84 140,89 C 135,88 128,86 122,87 C 117,87 114,80 116,74 Z"
+      fill="#1C1816"
+      opacity="0.9"
+    />
+    <!-- Africa (mid right peeking) -->
+    <path
+      d="M 120,95 C 123,93 130,94 134,98 C 137,102 135,108 131,111 C 127,114 122,112 119,106 C 117,100 118,97 120,95 Z"
+      fill="#1C1816"
+      opacity="0.9"
+    />
+    <!-- Australia (bottom right peeking) -->
+    <path
+      d="M 128,118 C 131,116 135,118 137,121 C 136,124 132,126 129,125 C 126,124 126,120 128,118 Z"
+      fill="#1C1816"
+      opacity="0.9"
+    />
+
+    <!-- 4. SHIELD / CREST (Centered exactly in front of the globe) -->
+    <!-- Outer Silver/Sand Shield Border -->
+    <path
+      d="M 52,78 Q 80,84 108,78 Q 108,106 80,123 Q 52,106 52,78 Z"
+      fill="url(#shield-grad)"
+      stroke="url(#sand-gold)"
+      stroke-width="1.8"
+    />
+    <!-- Inner Shield outline for layered, realistic 3D appearance -->
+    <path
+      d="M 57,81 Q 80,85 103,81 Q 103,103 80,118 Q 57,103 57,81 Z"
+      fill="none"
+      stroke="#B38F6F"
+      stroke-width="0.75"
+      opacity="0.75"
+    />
+
+    <!-- 5. CROWN OF FIRE / FLAME (Sitting majestically on top of the globe & shield) -->
+    <!-- Stylized premium bright red/crimson flame resembling the official Winners' logo -->
+    <path
+      d="M 38,70 
+         C 34,60 38,50 40,46 
+         C 41,51 43,56 46,60 
+         C 43,44 49,30 54,26 
+         C 57,36 60,46 66,51 
+         C 63,33 72,16 80,10 
+         C 88,20 97,38 100,48 
+         C 97,34 105,22 112,18 
+         C 112,32 113,40 116,45 
+         C 115,38 119,32 122,35 
+         C 122,42 121,48 123,54 
+         C 124,57 125,64 125,70
+         Q 80,80 38,70 Z"
+      fill="#D61B27"
+      stroke="#970D16"
+      stroke-width="0.75"
+    />
+    
+    <!-- Flame Inner Highlight (Bright orange/gold glow for volumetric shine) -->
+    <path
+      d="M 48,63
+         C 46,53 48,46 51,43
+         C 52,47 54,52 56,55
+         C 55,44 59,34 63,31
+         C 65,39 68,46 72,50
+         C 70,36 76,23 80,18
+         C 85,27 92,41 94,49
+         C 92,38 98,28 103,25
+         C 103,34 104,40 106,44
+         Q 80,68 48,63 Z"
+      fill="#F29111"
+      opacity="0.45"
+    />
+  </g>
+</g></svg>

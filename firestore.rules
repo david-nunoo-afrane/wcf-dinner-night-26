@@ -1,0 +1,61 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Global catch-all safety net (Pillar 1)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions (Pillar 3)
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // Validation Blueprint for Golden Banquet Booking (Pillar 2)
+    function isValidBooking(data) {
+      return data.keys().hasAll(['id', 'registration', 'amountPaid', 'date', 'status'])
+        && data.keys().size() <= 8
+        && data.id is string
+        && data.id.size() <= 50
+        && data.registration is map
+        && data.registration.fullName is string
+        && data.registration.fullName.size() <= 200
+        && data.registration.email is string
+        && data.registration.email.size() <= 200
+        && data.registration.phone is string
+        && data.registration.phone.size() <= 50
+        && data.registration.ticketType is string
+        && (data.registration.ticketType == 'Single' || data.registration.ticketType == 'Double' || data.registration.ticketType == 'Table of 4')
+        && data.registration.quantity is int
+        && data.amountPaid is number
+        && data.date is string
+        && data.date.size() <= 50
+        && data.status is string
+        && (data.status == 'Confirmed' || data.status == 'Pending')
+        && (!data.keys().contains('paymentRef') || (data.paymentRef is string && data.paymentRef.size() <= 100))
+        && (!data.keys().contains('paymentMethod') || (data.paymentMethod is string && data.paymentMethod.size() <= 100));
+    }
+
+    match /bookings/{bookingId} {
+      // Allow public creation of valid booking requests
+      allow create: if isValidId(bookingId) && isValidBooking(incoming());
+      
+      // Allow public retrieval of individual bookings (e.g., ticket page verification)
+      allow get: if isValidId(bookingId);
+      
+      // Allow complete listing and deletion/revocation (via DEV panel)
+      allow list: if true;
+      allow update: if isValidId(bookingId) && isValidBooking(incoming()) && (incoming().id == existing().id);
+      allow delete: if isValidId(bookingId);
+    }
+  }
+}

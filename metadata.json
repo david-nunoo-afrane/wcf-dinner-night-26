@@ -1,0 +1,6 @@
+{
+  "name": "Dinner Night '26",
+  "description": "Luxurious, cinematic, and elegant registration platform for the premier Dinner Night '26 event hosted by WCF-KNUST.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
